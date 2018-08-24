@@ -2,7 +2,7 @@
 # Make It Generic
 
 ## Introduction
-Can I have a `T`? If you are perplexed, that would be reasonable. In the real world, it is virtually impossible for you to respond to this without more context or specialization. Do I need a medium, do I need it hot, or should it be uppercase? However, in software engineering and Swift specifically, generally when you see the uppercase `T`, we are employing one of the most powerful paradigms in modern software engineering, _Generics_.
+Can I have a `T`? If you are perplexed, that would be reasonable. In the real world, it is virtually impossible for you to respond to this without more context or specialization. Do I need a medium, do I need it hot, or should it be uppercase? However, in software engineering and Swift specifically, generally when you see the uppercase `T`, we are employing one of the most powerful paradigms in modern software engineering: _Generics_.
 
 ```Swift 
 struct Resource<T> {
@@ -12,9 +12,15 @@ struct Resource<T> {
 }
 ```
 
-Generics aims to increase flexibility by expanding the possibilities of parameterization into the type system. That is, you can fill an object’s field with whatever type you desire. The `attribute` field in `Resource` above can be filled with any type. The beauty here is that generics enhances safety without _hampering_ performance. 
+Generics aim to increase flexibility by expanding the possibilities of parameterization into the type system. That is, you can fill an object’s fields with whatever type(s) you desire. The `attribute` field above can be filled with a value of any type. The beauty here is that generics enhance safety without _hampering_ runtime performance. // I specify runtime performance here because generics do hamper compile-time performance ;) But as with all my feedback, feel free to ignore.
 
-To different people, _Generics_ means different things. Today we will be focusing on _Parametric Polymorphism._ Sounds complicated? My friend Ian would describe this as having a million dollar name for a ten dollar concept. Parametric means “can be expressed as a parameter”, so like any of the fields in this resource object. Polymorphism? Sounds bright, not really. The prefix _poly_ means many and _morphism_ means form. So in this context, parametric polymorphism means having parameters that can be expressed in many forms.
+The term _Generics_ means different things to different people. Today we will be focusing on _Parametric Polymorphism_. Sound complicated? My friend Ian would describe this as having "a million dollar name for a ten dollar concept". Let's break this complicated term down a bit.
+
+_Parametric_ means “can be expressed as a parameter”, so like any of the fields in this resource object. 
+
+// The second half of this sentence is confusing to me and I'm not really sure what it's trying to say, so I'd either say remove it or add more to it. As for what to add, maybe something along the lines of "_Parametric_ means “can be expressed as a parameter”. Parameters, in the context of a type definition, are the fields that compose the type." or "_Parametric_ means “can be expressed as a parameter”. A _Parameter_ is "a characteristic that can help in defining a system". AKA: the fields of this `Resource` type."
+
+_Polymorphism_? Sounds bright... but not really. The prefix _poly_ means "many" and _morphism_ means "form". So in this context, "Parametric Polymorphism" means having parameters that can be expressed in many forms.
 
 ## Abstraction Specialization Phases
 Software engineering proceeds in what can be described as an _Abstraction_, _Specialization_ cycle. The abstraction phase involves identifying and classifying commonalities. In this fashion, we eliminate irrelevant details and focus on the essentials, gaining a broader understanding of the elements comprising our systems. In the end we arrive at a collection of laws that drive the *specialization* phase. During *specialization*, the general laws are used to instantiate specific cases required to make our systems work. This can lead to incredibly novel applications.
