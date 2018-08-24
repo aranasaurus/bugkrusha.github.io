@@ -25,8 +25,14 @@ _Polymorphism_? Sounds bright... but not really. The prefix _poly_ means "many" 
 ## Abstraction Specialization Phases
 Software engineering proceeds in what can be described as an _Abstraction_, _Specialization_ cycle. The abstraction phase involves identifying and classifying commonalities. In this fashion, we eliminate irrelevant details and focus on the essentials, gaining a broader understanding of the elements comprising our systems. In the end we arrive at a collection of laws that drive the *specialization* phase. During *specialization*, the general laws are used to instantiate specific cases required to make our systems work. This can lead to incredibly novel applications.
 
+// I've read this paragraph 6 or 7 times now and I can't come up with a way to make it better, but goodness is it heavy on the cognitive load. Maybe when I've finished reading through the rest of the article I'll come back to this one and it'll make more sense... But as a first-time-through reader I'm having a hard time moving past it so I thought it was at least worth pointing out as a spot that might need some attention; some "dumbing down" for the likes of pea-brains like me :)
+
+// After reading the next paragraph this paragraph makes a little more sense, but ultimately it kinda feels like both paragraphs are wedged in here and maybe should moved elsewhere... Again, I'll come back after I've made it further and maybe I'll have something more useful to suggest.
+
 ## Parameterization
 Generic programming is normally manifested as some form of parameterization. Remember, this just means to be expressed in terms of parameters. Often times when you have a list of specific programs, you can remove the differences that lead to those specific programs and end up with a single unified generic program. Then, instantiating this unified program with various parameters causes the program to specialize itself and be expressed differently.
+
+// I'm detecting a pattern of defining Parameterization as "expressed in terms of parameters", which is a tautology, hence my adding to the definition above. The extra sentence here "Remember, this just means to be expressed in terms of parameters." seems unnecessary, not because I know what Parameterization means, but because if I don't, this sentence doesn't help me change that. It's like me saying "Remember foofinization just means it's made of foofies".
 
 ### Types
 There are different types of Generics. Today, we will cover value, type and function.
